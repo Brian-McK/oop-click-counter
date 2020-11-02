@@ -5,7 +5,7 @@ package oop;
 // Each click will add one to the counter's count
 
 public class Counter {
-    private int count = 0;  // current count , initially 0
+    private int count;  // current count , initially 0
     private final int limit;
 
     // Constructor
@@ -15,6 +15,7 @@ public class Counter {
     }
 
     public Counter() {   // no-argument (default) constructor
+        count = 0;
         limit = 10;
     }
 

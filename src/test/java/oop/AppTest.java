@@ -27,8 +27,11 @@ public class AppTest
     public void undo()
     {
         Counter counter = new Counter();
+        counter.click();
+        counter.click();
+        counter.click();
         counter.undo();
-        int expected = 0;
+        int expected = 2;
         int actual = counter.getCount();
         assertEquals(expected, actual);
     }
