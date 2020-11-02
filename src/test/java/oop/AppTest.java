@@ -23,6 +23,16 @@ public class AppTest
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void undo()
+    {
+        Counter counter = new Counter();
+        counter.undo();
+        int expected = 0;
+        int actual = counter.getCount();
+        assertEquals(expected, actual);
+    }
+
     //TODO add a test for Counter undo()
 
 }
