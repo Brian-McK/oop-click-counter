@@ -11,12 +11,12 @@ public class Counter {
     // Constructor
     public Counter(int limit) {
         this.limit = limit; // 'this.' distinguishes field from parameter
-        System.out.println("Counter constructor called, limit set to " + limit);
+        System.out.println("Counter constructor called, limit set to " + this.limit);
     }
 
     public Counter() {   // no-argument (default) constructor
-        count = 0;
-        limit = 10;
+        this.count = 0;
+        this.limit = 10;
     }
 
     public int getCount() {
@@ -27,28 +27,28 @@ public class Counter {
      * click() increments the value of this counter by 1.
      */
     public void click() {
-        if (count < limit) {
-            count = count + 1;
+        if (this.count < this.limit) {
+            this.count = this.count + 1;
         } else {
             System.out.println("Limit Reached");
         }
-        System.out.println("Counter clicked! count = " + count);
+        System.out.println("Counter clicked! count = " + this.count);
     }
 
     public void reset()
     {
-        count = 0;
+        this.count = 0;
     }
 
     public void undo()
     {
-        if(count != 0)
+        if(this.count != 0)
         {
-            count -= 1;
+            this.count -= 1;
         }
     }
 
     public void display() {
-        System.out.println("Display count, count = " + count );
+        System.out.println("Display count, count = " + this.count );
     }
 }
